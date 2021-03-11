@@ -21,6 +21,7 @@
 
 &gmac0 {
 	mtd-mac-address = <&factory 0x22>;
+	phy-mode = "trgmii";
 };
 
 &switch0 {
@@ -56,6 +57,10 @@
 			label = "eth4";
 			mtd-mac-address = <&factory 0x22>;
 			mtd-mac-address-increment = <4>;
+		};
+
+		port@6 {
+			phy-mode = "trgmii";
 		};
 	};
 };
